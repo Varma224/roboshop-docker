@@ -23,7 +23,7 @@ services:
       - mongodb
   cart:
     image: dnavarma/cart:v1
-    container_name: user
+    container_name: cart
     depends_on:
       - catalogue
       - redis
@@ -39,7 +39,6 @@ services:
   rabbitmq:
     image: rabbitmq:3
     container_name: rabbitmq
-    environment: 
+    environment:
       RABBITMQ_DEFAULT_USER: roboshop
       RABBITMQ_DEFAULT_PASS: roboshop123
-      
