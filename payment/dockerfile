@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.9 AS builder
 WORKDIR /opt/server
 COPY requirements.txt .
 COPY *.py .
